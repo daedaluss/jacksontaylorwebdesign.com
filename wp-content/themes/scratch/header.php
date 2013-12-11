@@ -30,19 +30,25 @@
 	<![endif]-->
     <?php wp_enqueue_script('jquery'); ?>
 	<?php wp_head(); ?>
-   
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/style.css">
+      <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/normalizer.css">
+
+        <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css">
+
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/animate.min.css">
+
+
+
 </head>
 
 <body <?php body_class(); ?>>
 	
     
-<section id="nav">
+<section id="nav" class="">
 	<header class="gridContainer clearfix">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 				
 		
-		</navigation>
+		
 	</header>
 </section>
 

@@ -18,4 +18,11 @@ function theme_name_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 
+
+register_nav_menus( array(
+	'static-menu' => 'Static Homepage Menu',
+	'floating-menu' => 'Floating Menu'
+) );
+
+
 ?>

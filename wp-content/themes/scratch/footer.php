@@ -38,14 +38,49 @@
 			playoutAnimations: true
 		});
 		
-		
+		$(window).on('resize', function(){
+                var vpheight = $(window).height();
+                var vpwidth = $(window).width();
+
+        if(vpwidth>vpheight) {
+          // Landscape
+            var height = $(window).height() * 0.00148;
+            var width = height / 2 * -958;
+            $('.scales').css('transform', 'scale(' + height + ')');
+            $('.scales').css('-ms-transform', 'scale(' + height + ')');
+            $('.scales').css('-webkit-transform', 'scale(' + height + ')');
+            $('.scales').css('-o-transform', 'scale(' + height + ')');
+            $('.scales').css('-moz-transform', 'scale(' + height + ')');
+            $('#ChangableElements').css({'left': width  + 'px'});
+        } else if(vpwidth <=720 && vpheight > 569 ) {
+            var height = $(window).height() * 0.000675;
+            var width = height / 2 * -958;
+            $('.scales').css('transform', 'scale(' + height + ')');
+            $('.scales').css('-ms-transform', 'scale(' + height + ')');
+            $('.scales').css('-webkit-transform', 'scale(' + height + ')');
+            $('.scales').css('-o-transform', 'scale(' + height + ')');
+            $('.scales').css('-moz-transform', 'scale(' + height + ')');
+            $('#ChangableElements').css({'left': width  + 'px'});
+        } else {
+          // Portrait
+            var height = $(window).height() * 0.000895;
+            var width = height / 2 * -958;
+            $('.scales').css('transform', 'scale(' + height + ')');
+            $('.scales').css('-ms-transform', 'scale(' + height + ')');
+            $('.scales').css('-webkit-transform', 'scale(' + height + ')');
+            $('.scales').css('-o-transform', 'scale(' + height + ')');
+            $('.scales').css('-moz-transform', 'scale(' + height + ')');
+            $('#ChangableElements').css({'left': width  + 'px'});
+        }
+        }).resize()
 	
-	
-	
+	jQuery( "#centered-home" ).css( 'top', parseInt( ( jQuery( window ).outerHeight() / 2 ) + jQuery( document ).scrollTop() - jQuery( "#centered-home" ).height() ) );
+jQuery( "#centered-home" ).css( 'left', parseInt( ( jQuery( document ).outerWidth() / 2 ) + jQuery( document ).scrollLeft() - jQuery( "#centered-home" ).width() ) );
 	});
 	
 	
-	</script>
+	</script><script type="text/javascript" src="//use.typekit.net/xtd8eug.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	<?php wp_footer(); ?>
 </body>

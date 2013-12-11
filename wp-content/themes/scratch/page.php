@@ -7,20 +7,15 @@ Template Name: Homepage
 get_header(); ?>
 
 <section id="branding" >
-    	<div id="brand-top">
-       
 	<div class="gridContainer clearfix">
-
-	<ul class="fluid animated fadeIn scales" id="centered-home">
+	<ul class="fluid">
 		<li class="brand">
 			<h1><span class="noDisplay">Jackson Taylor</span></h1>
 		</li>
-		<li class="tagline scales">
+		<li class="tagline">
 			<h2>Timeless &amp; Luxrious Design</h2>
 		</li>
 	</ul>
-    </div>
-     	<div id="brand-bottom"></div>
     </div>
 </section>
 
